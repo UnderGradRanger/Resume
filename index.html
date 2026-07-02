@@ -19,6 +19,7 @@
             --border: #334155;
             --card-bg: rgba(30, 41, 59, 0.7);
             --success: #10b981;
+            --warning: #f59e0b;
         }
 
         * {
@@ -237,6 +238,12 @@
             color: var(--text-secondary);
         }
 
+        .date-badge.in-progress {
+            background-color: rgba(245, 158, 11, 0.1);
+            border-color: rgba(245, 158, 11, 0.3);
+            color: var(--warning);
+        }
+
         .timeline-body ul {
             list-style-type: none;
         }
@@ -341,11 +348,27 @@
             padding: 1.5rem;
             text-align: center;
             transition: transform 0.2s ease, border-color 0.2s ease;
+            position: relative;
         }
 
         .certification-card:hover {
             transform: translateY(-2px);
             border-color: var(--accent);
+        }
+
+        .certification-card.in-progress::before {
+            content: 'IN PROGRESS';
+            position: absolute;
+            top: 0.75rem;
+            right: 0.75rem;
+            background-color: rgba(245, 158, 11, 0.1);
+            color: var(--warning);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            padding: 0.25rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.65rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
         }
 
         .cert-icon {
@@ -364,6 +387,30 @@
         .cert-issuer {
             font-size: 0.9rem;
             color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .cert-progress {
+            font-size: 0.85rem;
+            color: var(--warning);
+            font-weight: 500;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 6px;
+            background-color: rgba(245, 158, 11, 0.1);
+            border-radius: 3px;
+            margin-top: 0.75rem;
+            overflow: hidden;
+            border: 1px solid rgba(245, 158, 11, 0.2);
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--warning) 0%, rgba(245, 158, 11, 0.7) 100%);
+            border-radius: 3px;
+            transition: width 0.3s ease;
         }
 
         /* Projects Section */
@@ -609,6 +656,12 @@
                 gap: 0.75rem;
                 font-size: 0.85rem;
             }
+
+            .certification-card.in-progress::before {
+                top: 0.5rem;
+                right: 0.5rem;
+                font-size: 0.6rem;
+            }
         }
 
         @media print {
@@ -642,7 +695,7 @@
             <h1>IT Client Tech & <br><span>AV Coordinator</span></h1>
             <div class="subtitle">Based in Australia</div>
             <p>
-                Highly capable IT professional specializing in modern endpoint management, reliable service desk operations, and advanced audiovisual deployment. Proven expertise in optimizing workplace technologies, managing enterprise infrastructure at scale, and delivering seamless technical support across dynamic academic and event environments. Passionate about cybersecurity, cloud solutions, and building resilient IT ecosystems that empower organizations.
+                Highly capable IT professional specializing in modern endpoint management, reliable service desk operations, and advanced audiovisual deployment. Proven expertise in optimizing workplace technology, managing enterprise infrastructure, and delivering excellent user support across multi-campus environments.
             </p>
             <div class="contact-links">
                 <a href="mailto:cristhian.tacuma@example.com" class="contact-link">
@@ -674,7 +727,7 @@
                         <div class="job-title">IT Client Tech / AV Coordinator</div>
                         <div class="company">Emmanuel College</div>
                     </div>
-                    <span class="date-badge">Current Position</span>
+                    <span class="date-badge in-progress">Current Position</span>
                 </div>
                 <div class="timeline-body">
                     <ul>
@@ -756,6 +809,18 @@
             <h2>Certifications & Credentials</h2>
             <div class="certifications-grid">
                 
+                <div class="certification-card in-progress">
+                    <div class="cert-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="cert-name">Google IT Support Professional</div>
+                    <div class="cert-issuer">Google • Career Certificates</div>
+                    <div class="cert-progress">1 of 6 modules</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 16.67%"></div>
+                    </div>
+                </div>
+
                 <div class="certification-card">
                     <div class="cert-icon">
                         <i class="fas fa-certificate"></i>
@@ -823,7 +888,7 @@
                 <div class="project-card">
                     <div class="project-title">Homelab Network Infrastructure</div>
                     <div class="project-description">
-                        Designed and implemented comprehensive homelab featuring Docker containerization, advanced routing, VLANs, and network segmentation. Built for testing enterprise solutions and cybersecurity practices in real-world scenarios.
+                        Designed and implemented comprehensive homelab featuring Docker containerization, advanced routing, VLANs, and network segmentation. Built for testing enterprise solutions and continuous technical development.
                     </div>
                     <div class="project-tech">
                         <span class="tech-badge">Docker</span>
@@ -857,11 +922,11 @@
                         <div class="job-title">Undergraduate Certificate in Cybersecurity</div>
                         <div class="institution">La Trobe University</div>
                     </div>
-                    <span class="date-badge">Commencing July 2026</span>
+                    <span class="date-badge in-progress">Commencing July 2026</span>
                 </div>
                 <div class="timeline-body">
                     <p>
-                        Beginning formal university studies in cybersecurity pathways targeting explicit foundations in cyber defense, secure ecosystem design, risk management, and incident response. This degree will deepen theoretical knowledge in security architecture, compliance frameworks, and threat analysis while complementing hands-on operational experience from current role.
+                        Beginning formal university studies in cybersecurity pathways targeting explicit foundations in cyber defense, secure ecosystem design, risk management, and incident response protocols.
                     </p>
                 </div>
             </div>
@@ -876,7 +941,7 @@
                 </div>
                 <div class="timeline-body">
                     <p>
-                        Advanced academic training centered on complex networking architecture, modern enterprise infrastructure deployment, macro systems implementation, and cloud technology integration. Gained expertise in designing scalable networks, implementing security controls, and managing enterprise-grade systems at architectural level.
+                        Advanced academic training centered on complex networking architecture, modern enterprise infrastructure deployment, macro systems implementation, and cloud technology integration.
                     </p>
                 </div>
             </div>
@@ -891,7 +956,7 @@
                 </div>
                 <div class="timeline-body">
                     <p>
-                        Expanded underlying operational knowledge in enterprise grade networking stacks, active directory and systems administration paradigms, structured cabling methodologies, and network security fundamentals. Built foundation for advanced infrastructure management and IT operations.
+                        Expanded underlying operational knowledge in enterprise grade networking stacks, active directory and systems administration paradigms, structured cabling methodologies, and network optimization.
                     </p>
                 </div>
             </div>
@@ -906,7 +971,7 @@
                 </div>
                 <div class="timeline-body">
                     <p>
-                        Focused directly on foundational routing protocols, switching techniques, core TCP/IP logic, network perimeter security, and basic Windows systems administration. Developed practical skills in network troubleshooting, hardware configuration, and IT support fundamentals.
+                        Focused directly on foundational routing protocols, switching techniques, core TCP/IP logic, network perimeter security, and basic Windows systems administration.
                     </p>
                 </div>
             </div>
@@ -921,7 +986,7 @@
                 </div>
                 <div class="timeline-body">
                     <p>
-                        Completed global-focused degree emphasizing international affairs, political science methodologies, diplomacy frameworks, and quantitative/qualitative research approaches. Developed cross-cultural communication skills, analytical thinking, and project management capabilities that complement technical expertise.
+                        Completed global-focused degree emphasizing international affairs, political science methodologies, diplomacy frameworks, and quantitative/qualitative research approaches. Developed analytical and communication skills.
                     </p>
                 </div>
             </div>
@@ -932,13 +997,13 @@
             <h2>Career Vision & Trajectory</h2>
             <div class="goals-card">
                 <p>
-                    I am actively dedicated to long-term professional development, consistently driving my technical expertise deeper into cloud ecosystems, modern secure infrastructure, and unified modern workplace technologies. My strategic focus combines hands-on operational excellence with architectural thinking to solve complex organizational challenges.
+                    I am actively dedicated to long-term professional development, consistently driving my technical expertise deeper into cloud ecosystems, modern secure infrastructure, and unified communications platforms.
                 </p>
                 <p>
-                    With my upcoming academic milestone at La Trobe University, my systematic focus centers heavily on cybersecurity principles as I transition into a full Bachelor's tier degree track. This formal education will provide rigorous theoretical foundations to complement my practical field experience and accelerate my transition into advanced technical leadership roles.
+                    With my upcoming academic milestone at La Trobe University, my systematic focus centers heavily on cybersecurity principles as I transition into a full Bachelor's tier degree track, positioning myself for advanced technical leadership roles.
                 </p>
                 <p>
-                    <strong>Long-Term Objectives:</strong> I aim to leverage my diverse field experience and foundational insight to step confidently into roles such as <strong>Senior Systems Administrator</strong>, <strong>Infrastructure Architect</strong>, or <strong>Cybersecurity Specialist</strong>. Ultimately, I aspire to lead enterprise IT transformation initiatives where technology strategy directly impacts organizational mission, bridging the gap between cutting-edge security practices and business resilience.
+                    <strong>Long-Term Objectives:</strong> I aim to leverage my diverse field experience and foundational insight to step confidently into roles such as <strong>Senior Systems Administrator</strong>, <strong>Cloud Infrastructure Specialist</strong>, or <strong>Cybersecurity Analyst</strong>, driving organizational digital transformation and security excellence.
                 </p>
             </div>
         </section>
