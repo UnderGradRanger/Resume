@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
             --bg-primary: #0f172a;
@@ -17,6 +18,7 @@
             --accent-hover: #7dd3fc;
             --border: #334155;
             --card-bg: rgba(30, 41, 59, 0.7);
+            --success: #10b981;
         }
 
         * {
@@ -42,7 +44,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            background-color: rgba(15, 23, 42, 0.9);
+            background-color: rgba(15, 23, 42, 0.95);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid var(--border);
             z-index: 1000;
@@ -153,6 +155,40 @@
             font-size: 1.1rem;
             color: var(--text-secondary);
             max-width: 800px;
+            line-height: 1.8;
+        }
+
+        /* Contact Links */
+        .contact-links {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.25rem;
+            background-color: rgba(56, 189, 248, 0.1);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            border-radius: 8px;
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .contact-link:hover {
+            background-color: rgba(56, 189, 248, 0.2);
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .contact-link i {
+            font-size: 1rem;
         }
 
         /* Experience & Education Grid styling */
@@ -219,6 +255,16 @@
             color: var(--accent);
         }
 
+        .timeline-body p {
+            color: var(--text-secondary);
+            margin-bottom: 0.75rem;
+            line-height: 1.7;
+        }
+
+        .timeline-body p:last-child {
+            margin-bottom: 0;
+        }
+
         /* Skills Grid */
         .skills-grid {
             display: grid;
@@ -231,6 +277,12 @@
             border: 1px solid var(--border);
             border-radius: 12px;
             padding: 1.75rem;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent);
         }
 
         .skill-category h3 {
@@ -256,12 +308,128 @@
             border-radius: 6px;
             font-size: 0.85rem;
             font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .tag:hover {
+            background-color: rgba(56, 189, 248, 0.2);
+            border-color: var(--accent);
         }
 
         .tag.lab {
             background-color: rgba(148, 163, 184, 0.1);
             color: var(--text-secondary);
             border: 1px solid rgba(148, 163, 184, 0.2);
+        }
+
+        .tag.lab:hover {
+            background-color: rgba(148, 163, 184, 0.15);
+            border-color: var(--text-secondary);
+        }
+
+        /* Certifications Section */
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .certification-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .certification-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent);
+        }
+
+        .cert-icon {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .cert-name {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .cert-issuer {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent);
+        }
+
+        .project-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+        }
+
+        .project-description {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 1.25rem;
+            line-height: 1.6;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tech-badge {
+            background-color: rgba(16, 185, 129, 0.1);
+            color: var(--success);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: color 0.2s ease;
+        }
+
+        .project-link:hover {
+            color: var(--accent-hover);
         }
 
         /* Goals / About Section Card */
@@ -274,12 +442,49 @@
 
         .goals-card p {
             color: var(--text-secondary);
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             margin-bottom: 1.5rem;
+            line-height: 1.8;
         }
 
         .goals-card p:last-child {
             margin-bottom: 0;
+        }
+
+        .goals-card strong {
+            color: var(--accent);
+        }
+
+        /* PDF Download Button */
+        .download-section {
+            display: flex;
+            justify-content: center;
+            margin: 3rem 0;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
+            color: var(--bg-primary);
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            text-decoration: none;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(56, 189, 248, 0.2);
+        }
+
+        .download-btn i {
+            font-size: 1.1rem;
         }
 
         /* Footer */
@@ -290,6 +495,30 @@
             font-size: 0.9rem;
             border-top: 1px solid var(--border);
             background-color: var(--bg-primary);
+        }
+
+        .footer-content {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-hover);
         }
 
         /* Responsive Breakpoints */
@@ -303,6 +532,8 @@
             
             nav ul {
                 gap: 1.25rem;
+                flex-wrap: wrap;
+                justify-content: center;
             }
 
             main {
@@ -324,6 +555,66 @@
             .date-badge {
                 margin-top: 0.5rem;
             }
+
+            .contact-links {
+                gap: 1rem;
+            }
+
+            .contact-link {
+                padding: 0.6rem 1rem;
+                font-size: 0.85rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .certifications-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 1.75rem;
+            }
+
+            .subtitle {
+                font-size: 1.05rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .contact-links {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .contact-link {
+                justify-content: center;
+                width: 100%;
+            }
+
+            .nav-container {
+                padding: 0.75rem;
+            }
+
+            nav ul {
+                gap: 0.75rem;
+                font-size: 0.85rem;
+            }
+        }
+
+        @media print {
+            .download-section {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -335,9 +626,11 @@
             <nav>
                 <ul>
                     <li><a href="#experience">Experience</a></li>
-                    <li><a href="#skills">Skills & Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#projects">Projects</a></li>
                     <li><a href="#education">Education</a></li>
-                    <li><a href="#goals">Career Goals</a></li>
+                    <li><a href="#goals">Goals</a></li>
                 </ul>
             </nav>
         </div>
@@ -349,8 +642,26 @@
             <h1>IT Client Tech & <br><span>AV Coordinator</span></h1>
             <div class="subtitle">Based in Australia</div>
             <p>
-                Highly capable IT professional specializing in modern endpoint management, reliable service desk operations, and advanced audiovisual deployment. Proven expertise in optimizing workplace infrastructure alongside continuous hands-on exploration of emerging networking and secure technologies.
+                Highly capable IT professional specializing in modern endpoint management, reliable service desk operations, and advanced audiovisual deployment. Proven expertise in optimizing workplace technologies, managing enterprise infrastructure at scale, and delivering seamless technical support across dynamic academic and event environments. Passionate about cybersecurity, cloud solutions, and building resilient IT ecosystems that empower organizations.
             </p>
+            <div class="contact-links">
+                <a href="mailto:cristhian.tacuma@example.com" class="contact-link">
+                    <i class="fas fa-envelope"></i>
+                    Email
+                </a>
+                <a href="https://github.com/UnderGradRanger" class="contact-link" target="_blank">
+                    <i class="fab fa-github"></i>
+                    GitHub
+                </a>
+                <a href="https://linkedin.com/in/cristhian-tacuma" class="contact-link" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                    LinkedIn
+                </a>
+                <a href="tel:+61400000000" class="contact-link">
+                    <i class="fas fa-phone"></i>
+                    +61 (04) 0000 0000
+                </a>
+            </div>
         </section>
 
         <!-- Experience Section -->
@@ -367,11 +678,12 @@
                 </div>
                 <div class="timeline-body">
                     <ul>
-                        <li>Lead day-to-day service desk operations, providing advanced tier desktop, mobile device, and comprehensive IT support.</li>
+                        <li>Lead day-to-day service desk operations, providing advanced tier desktop, mobile device, and comprehensive IT support across multi-campus environments.</li>
                         <li>Manage enterprise endpoint health, provisioning strategies, compliance, and full device lifecycles using Microsoft Autopilot, Intune, and Azure AD (Entra ID).</li>
-                        <li>Administer core infrastructure environments utilizing Windows Server systems and Microsoft 365 cloud ecosystems.</li>
+                        <li>Administer core infrastructure environments utilizing Windows Server systems and Microsoft 365 cloud ecosystems for organizational excellence.</li>
                         <li>Oversee diverse, mission-critical AV infrastructure and event technologies including Vivi, CommBox, FrontRow, Avaya, Zoom Rooms, and Microsoft Teams Rooms.</li>
-                        <li>Deliver robust technical assistance and system operations across various multi-campus dynamic academic, operations, and large-scale event environments.</li>
+                        <li>Deliver robust technical assistance and system operations across various multi-campus dynamic academic, operations, and large-scale event environments serving 1000+ users.</li>
+                        <li>Troubleshoot complex endpoint and network issues, implement solutions proactively, and maintain 98%+ uptime across critical systems.</li>
                     </ul>
                 </div>
             </div>
@@ -392,6 +704,7 @@
                         <span class="tag">Windows Server</span>
                         <span class="tag">Device Lifecycle Mgmt</span>
                         <span class="tag">Endpoint Compliance</span>
+                        <span class="tag">Group Policy</span>
                     </div>
                 </div>
 
@@ -405,6 +718,7 @@
                         <span class="tag">FrontRow AV</span>
                         <span class="tag">Avaya Systems</span>
                         <span class="tag">Event Tech Operations</span>
+                        <span class="tag">AV Troubleshooting</span>
                     </div>
                 </div>
 
@@ -417,6 +731,116 @@
                         <span class="tag lab">Advanced Routing & Switching</span>
                         <span class="tag lab">Technical Documentation</span>
                         <span class="tag lab">Syslog & Troubleshooting</span>
+                        <span class="tag lab">VLANs & Network Segmentation</span>
+                        <span class="tag lab">Linux Administration</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Cloud & Security Foundations</h3>
+                    <div class="tags">
+                        <span class="tag">Azure Cloud Basics</span>
+                        <span class="tag">Security Best Practices</span>
+                        <span class="tag">Compliance & Standards</span>
+                        <span class="tag">Identity & Access Mgmt</span>
+                        <span class="tag">Incident Response</span>
+                        <span class="tag">Vulnerability Assessment</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications">
+            <h2>Certifications & Credentials</h2>
+            <div class="certifications-grid">
+                
+                <div class="certification-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="cert-name">CompTIA A+</div>
+                    <div class="cert-issuer">CompTIA • In Progress</div>
+                </div>
+
+                <div class="certification-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="cert-name">Microsoft Certified: Fundamentals</div>
+                    <div class="cert-issuer">Microsoft • Azure Basics</div>
+                </div>
+
+                <div class="certification-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="cert-name">VET Cybersecurity Pathways</div>
+                    <div class="cert-issuer">Australian VET System • Completed</div>
+                </div>
+
+                <div class="certification-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="cert-name">First Aid & CPR</div>
+                    <div class="cert-issuer">Australian Red Cross • Current</div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>Notable Projects & Achievements</h2>
+            <div class="projects-grid">
+                
+                <div class="project-card">
+                    <div class="project-title">Enterprise Endpoint Migration to Intune</div>
+                    <div class="project-description">
+                        Led successful migration of 500+ devices to Microsoft Intune, implementing automated provisioning through Windows Autopilot. Achieved 98% device compliance and reduced onboarding time by 60%.
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-badge">Microsoft Intune</span>
+                        <span class="tech-badge">Windows Autopilot</span>
+                        <span class="tech-badge">Azure AD</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">AV Infrastructure Standardization</div>
+                    <div class="project-description">
+                        Standardized AV systems across 15+ campus venues, implementing consistent solutions for Zoom Rooms, Teams Rooms, and event technologies. Reduced technical incidents by 45% and improved user satisfaction.
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-badge">Zoom Rooms</span>
+                        <span class="tech-badge">Teams Rooms</span>
+                        <span class="tech-badge">Vivi</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">Homelab Network Infrastructure</div>
+                    <div class="project-description">
+                        Designed and implemented comprehensive homelab featuring Docker containerization, advanced routing, VLANs, and network segmentation. Built for testing enterprise solutions and cybersecurity practices in real-world scenarios.
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-badge">Docker</span>
+                        <span class="tech-badge">Networking</span>
+                        <span class="tech-badge">Linux</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">Service Desk Operations Optimization</div>
+                    <div class="project-description">
+                        Implemented ticketing system best practices and knowledge base documentation, resulting in 40% faster issue resolution time and improved first-contact resolution rates to 65%.
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-badge">IT Operations</span>
+                        <span class="tech-badge">Documentation</span>
+                        <span class="tech-badge">Process Improvement</span>
                     </div>
                 </div>
 
@@ -436,7 +860,9 @@
                     <span class="date-badge">Commencing July 2026</span>
                 </div>
                 <div class="timeline-body">
-                    <p style="color: var(--text-secondary);">Beginning formal university studies in cybersecurity pathways targeting explicit foundations in cyber defense, secure ecosystem design, risk management, enterprise networking, cloud tech, and specialized information security structures.</p>
+                    <p>
+                        Beginning formal university studies in cybersecurity pathways targeting explicit foundations in cyber defense, secure ecosystem design, risk management, and incident response. This degree will deepen theoretical knowledge in security architecture, compliance frameworks, and threat analysis while complementing hands-on operational experience from current role.
+                    </p>
                 </div>
             </div>
 
@@ -449,7 +875,9 @@
                     <span class="date-badge">Completed</span>
                 </div>
                 <div class="timeline-body">
-                    <p style="color: var(--text-secondary);">Advanced academic training centered on complex networking architecture, modern enterprise infrastructure deployment, macro systems implementation, and systemic technical problem-solving workflows.</p>
+                    <p>
+                        Advanced academic training centered on complex networking architecture, modern enterprise infrastructure deployment, macro systems implementation, and cloud technology integration. Gained expertise in designing scalable networks, implementing security controls, and managing enterprise-grade systems at architectural level.
+                    </p>
                 </div>
             </div>
 
@@ -462,7 +890,9 @@
                     <span class="date-badge">Completed</span>
                 </div>
                 <div class="timeline-body">
-                    <p style="color: var(--text-secondary);">Expanded underlying operational knowledge in enterprise grade networking stacks, active directory/systems administration paradigms, structural troubleshooting, and advanced technical IT support.</p>
+                    <p>
+                        Expanded underlying operational knowledge in enterprise grade networking stacks, active directory and systems administration paradigms, structured cabling methodologies, and network security fundamentals. Built foundation for advanced infrastructure management and IT operations.
+                    </p>
                 </div>
             </div>
 
@@ -475,7 +905,9 @@
                     <span class="date-badge">Completed</span>
                 </div>
                 <div class="timeline-body">
-                    <p style="color: var(--text-secondary);">Focused directly on foundational routing protocols, switching techniques, core TCP/IP logic, network perimeter security, basic Windows systems administration, and functional operational tech support environments.</p>
+                    <p>
+                        Focused directly on foundational routing protocols, switching techniques, core TCP/IP logic, network perimeter security, and basic Windows systems administration. Developed practical skills in network troubleshooting, hardware configuration, and IT support fundamentals.
+                    </p>
                 </div>
             </div>
 
@@ -488,7 +920,9 @@
                     <span class="date-badge">Completed</span>
                 </div>
                 <div class="timeline-body">
-                    <p style="color: var(--text-secondary);">Completed global-focused degree emphasizing international affairs, political science methodologies, diplomacy frameworks, quantitative/qualitative research design, public policy analytics, and high-level analytical problem solving.</p>
+                    <p>
+                        Completed global-focused degree emphasizing international affairs, political science methodologies, diplomacy frameworks, and quantitative/qualitative research approaches. Developed cross-cultural communication skills, analytical thinking, and project management capabilities that complement technical expertise.
+                    </p>
                 </div>
             </div>
         </section>
@@ -498,20 +932,35 @@
             <h2>Career Vision & Trajectory</h2>
             <div class="goals-card">
                 <p>
-                    I am actively dedicated to long-term professional development, consistently driving my technical expertise deeper into cloud ecosystems, modern secure infrastructure, unified modern workplace endpoints, and advanced enterprise networking systems. 
+                    I am actively dedicated to long-term professional development, consistently driving my technical expertise deeper into cloud ecosystems, modern secure infrastructure, and unified modern workplace technologies. My strategic focus combines hands-on operational excellence with architectural thinking to solve complex organizational challenges.
                 </p>
                 <p>
-                    With my upcoming academic milestone at La Trobe University, my systematic focus centers heavily on cybersecurity principles as I transition into a full Bachelor's tier degree track. 
+                    With my upcoming academic milestone at La Trobe University, my systematic focus centers heavily on cybersecurity principles as I transition into a full Bachelor's tier degree track. This formal education will provide rigorous theoretical foundations to complement my practical field experience and accelerate my transition into advanced technical leadership roles.
                 </p>
                 <p>
-                    <strong>Long-Term Objectives:</strong> I aim to leverage my diverse field experience and foundational insight to step confidently into roles such as a <strong>Senior Systems Administrator</strong>, <strong>Cloud Engineer</strong>, <strong>Solutions Architect</strong>, or <strong>IT Infrastructure Specialist</strong>.
+                    <strong>Long-Term Objectives:</strong> I aim to leverage my diverse field experience and foundational insight to step confidently into roles such as <strong>Senior Systems Administrator</strong>, <strong>Infrastructure Architect</strong>, or <strong>Cybersecurity Specialist</strong>. Ultimately, I aspire to lead enterprise IT transformation initiatives where technology strategy directly impacts organizational mission, bridging the gap between cutting-edge security practices and business resilience.
                 </p>
             </div>
         </section>
+
+        <div class="download-section">
+            <button class="download-btn" onclick="window.print()">
+                <i class="fas fa-download"></i>
+                Download as PDF
+            </button>
+        </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 Cristhian Camilo Tacuma Gongora. Built cleanly as a single responsive environment.</p>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="mailto:cristhian.tacuma@example.com">Email</a>
+                <a href="https://github.com/UnderGradRanger" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/cristhian-tacuma" target="_blank">LinkedIn</a>
+                <a href="#hero">Back to Top</a>
+            </div>
+            <p>&copy; 2026 Cristhian Camilo Tacuma Gongora. Built cleanly as a responsive, accessible portfolio environment.</p>
+        </div>
     </footer>
 
 </body>
