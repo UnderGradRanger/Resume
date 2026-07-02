@@ -413,11 +413,83 @@
       font-weight: 800;
     }
 
+    .achievement {
+      background: rgba(34, 197, 94, 0.08);
+      border-left: 3px solid var(--green);
+      padding: 12px 16px;
+      border-radius: 8px;
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+    }
+
+    .skill-category {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 20px;
+    }
+
+    .skill-category h4 {
+      color: var(--accent);
+      font-size: 1rem;
+      margin-bottom: 12px;
+      font-weight: 900;
+    }
+
+    .skill-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .skill-list li {
+      color: var(--muted);
+      padding: 6px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.95rem;
+    }
+
+    .skill-list li:last-child {
+      border-bottom: none;
+    }
+
     footer {
       border-top: 1px solid var(--border);
       padding: 30px 0;
       text-align: center;
       color: var(--muted);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .contact-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      text-align: center;
+    }
+
+    .contact-item strong {
+      display: block;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .contact-item a {
+      color: var(--text);
+      word-break: break-all;
     }
 
     @media (max-width: 880px) {
@@ -515,10 +587,10 @@
 
         <p>
           I am an IT Client Tech / AV Technician based in Melbourne, Australia.
-          My work focuses on service desk operations, desktop and mobile device support,
-          Microsoft 365, Azure AD, Intune, Windows Autopilot, endpoint management,
-          AV infrastructure, event technology, and practical support
-          for users across a school environment.
+          My work focuses on service desk operations, enterprise endpoint support,
+          Microsoft 365 and Azure administration, Intune device management,
+          audiovisual infrastructure, and reliable technical support for approximately 2,800 staff and students
+          across a school environment.
         </p>
 
         <div class="buttons">
@@ -564,8 +636,8 @@
         <div class="section-heading">
           <h2>Professional Experience</h2>
           <p>
-            Overview of my IT and AV responsibilities, focused on service desk,
-            endpoint support, Microsoft technologies, audiovisual systems, and user support.
+            Value delivered through enterprise IT support, endpoint management, Microsoft technologies,
+            audiovisual systems, and ensuring reliable operations across two campuses serving 2,800+ users.
           </p>
         </div>
 
@@ -574,34 +646,44 @@
             <div class="timeline-top">
               <div>
                 <h3>IT Client Tech / AV Technician</h3>
-                <p class="subtitle">Emmanuel College</p>
+                <p class="subtitle">Emmanuel College – Melbourne, Australia</p>
               </div>
               <span class="date">Current Position</span>
             </div>
 
+            <p style="margin-bottom: 16px;">
+              As an IT Client AV Technician, I provide frontline and advanced technical support across two campuses serving approximately 2,800 staff and students. My role combines enterprise desktop support, endpoint management, Microsoft technologies, audiovisual systems, and service desk operations to ensure reliable day-to-day IT services.
+            </p>
+
+            <h4 style="color: var(--accent); font-weight: 900; margin-top: 16px; margin-bottom: 12px;">Key Responsibilities & Achievements</h4>
             <ul>
-              <li>Responsible for service desk operations and user-focused technical support.</li>
-              <li>Provide advanced desktop, laptop, mobile device, and audiovisual support.</li>
-              <li>Support Windows Server, Microsoft 365, Azure AD, Intune, Windows Autopilot, endpoint compliance, and device lifecycle management.</li>
-              <li>Assist with device setup, provisioning, troubleshooting, repairs, and vendor processes as part of broader IT/AV responsibilities.</li>
-              <li>Support AV infrastructure and event technology, including Vivi, CommBox, FrontRow, Avaya, Zoom Rooms, and Microsoft Teams Rooms.</li>
-              <li>Support users across school, classroom, office, meeting-room, and event contexts.</li>
+              <li>Deliver technical support to approximately 2,800 users across two campuses, maintaining system reliability and user productivity.</li>
+              <li>Resolve an average of 10–15 technical incidents per day, maintaining normal classroom and administrative operations.</li>
+              <li>Provide same-day troubleshooting for hardware, software, Microsoft 365, networking, endpoint, and AV issues whenever possible.</li>
+              <li>Support complete device lifecycle management, including provisioning, deployment, troubleshooting, warranty coordination, and device replacement logistics.</li>
+              <li>Manage Windows devices enrolled in Microsoft Intune, supporting device compliance, security policies, and ongoing endpoint management.</li>
+              <li>Support Microsoft 365, Azure AD, Windows Server, Windows Autopilot, and enterprise Windows environments for staff and student access.</li>
+              <li>Configure, maintain, and troubleshoot AV technologies including Vivi, CommBox, FrontRow, Avaya, Zoom Rooms, and Microsoft Teams Rooms across classrooms and meeting spaces.</li>
+              <li>Prepare classrooms, meeting spaces, and events to ensure reliable audiovisual operation for teaching, presentations, and events.</li>
+              <li>Work closely with staff, teachers, leadership, and external vendors to resolve technical issues efficiently and maintain vendor relationships.</li>
             </ul>
+
+            <div class="achievement">
+              <strong>Technical Achievement:</strong> Investigated and resolved a critical communication issue affecting school administration when Mail Merge Toolkit became incompatible with the latest Microsoft 365 environment. After researching alternative solutions and validating multiple approaches, I identified Microsoft Power Automate as a suitable replacement, allowing the school to continue sending bulk excursion communications without disrupting daily operations.
+            </div>
           </div>
 
           <div class="timeline-item">
             <div class="timeline-top">
               <div>
-                <h3>Career Development Focus</h3>
-                <p class="subtitle">Modern Workplace, Endpoint and Infrastructure</p>
+                <h3>Continuous Learning & Development</h3>
+                <p class="subtitle">Modern Workplace, Endpoint & Infrastructure</p>
               </div>
               <span class="date">Ongoing</span>
             </div>
 
             <p>
-              I continue to build my skills through professional experience, structured learning,
-              home lab projects, and technical documentation. My focus is on Microsoft technologies,
-              endpoint management, networking, cloud computing, infrastructure support, and cybersecurity foundations.
+              Actively expanding expertise through professional experience, structured learning pathways, hands-on home lab projects, and technical documentation. Current focus areas include Microsoft technologies, endpoint management, networking fundamentals, cloud infrastructure, and cybersecurity foundations.
             </p>
           </div>
         </div>
@@ -613,54 +695,132 @@
         <div class="section-heading">
           <h2>Technical Skills</h2>
           <p>
-            Organised by practical work areas: enterprise support, Microsoft workplace,
-            endpoint management, audiovisual systems, networking, and documentation.
+            Organized by practical expertise areas: enterprise support, Microsoft workplace technologies,
+            endpoint management, audiovisual systems, service management, and infrastructure.
           </p>
         </div>
 
         <div class="grid">
           <div class="card">
-            <h3>Enterprise IT Support</h3>
-            <p>Service desk operations, user assistance, troubleshooting, escalation, desktop support, mobile device support, and technical communication.</p>
-            <div class="tags">
-              <span class="tag">Service Desk</span>
-              <span class="tag">Desktop Support</span>
-              <span class="tag">Mobile Devices</span>
-              <span class="tag">Troubleshooting</span>
-            </div>
+            <h3>Microsoft Technologies</h3>
+            <ul class="skill-list">
+              <li>Microsoft 365 Administration</li>
+              <li>Azure Active Directory (Azure AD)</li>
+              <li>Microsoft Intune</li>
+              <li>Windows Autopilot</li>
+              <li>Windows Server</li>
+              <li>Device Compliance & Policies</li>
+              <li>User Provisioning</li>
+            </ul>
           </div>
 
           <div class="card">
-            <h3>Microsoft Workplace</h3>
-            <p>Supporting modern workplace environments using Microsoft cloud and endpoint technologies.</p>
-            <div class="tags">
-              <span class="tag">Microsoft 365</span>
-              <span class="tag">Azure AD</span>
-              <span class="tag">Intune</span>
-              <span class="tag">Windows Autopilot</span>
-            </div>
+            <h3>Enterprise IT Support</h3>
+            <ul class="skill-list">
+              <li>Service Desk Operations</li>
+              <li>Desktop Support (Windows 10/11)</li>
+              <li>Mobile Device Support</li>
+              <li>Hardware Diagnostics</li>
+              <li>Incident Management</li>
+              <li>Root Cause Investigation</li>
+              <li>User Training & Technical Communication</li>
+            </ul>
           </div>
 
           <div class="card">
             <h3>Endpoint Management</h3>
-            <p>Device provisioning, endpoint compliance, device lifecycle management, Windows support, and endpoint troubleshooting.</p>
-            <div class="tags">
-              <span class="tag">Device Lifecycle</span>
-              <span class="tag">Endpoint Compliance</span>
-              <span class="tag">Windows Devices</span>
-              <span class="tag">Provisioning</span>
-            </div>
+            <ul class="skill-list">
+              <li>Device Lifecycle Management</li>
+              <li>Endpoint Compliance</li>
+              <li>Device Provisioning & Deployment</li>
+              <li>Windows Devices & Policies</li>
+              <li>Device Troubleshooting</li>
+              <li>Asset Management</li>
+            </ul>
           </div>
 
           <div class="card">
-            <h3>AV Infrastructure</h3>
-            <p>Classroom technology, event support, meeting rooms, display systems, audio systems, and AV troubleshooting.</p>
-            <div class="tags">
-              <span class="tag green">Vivi</span>
-              <span class="tag green">CommBox</span>
-              <span class="tag green">FrontRow</span>
-              <span class="tag green">Teams Rooms</span>
-            </div>
+            <h3>AV Infrastructure & Event Technology</h3>
+            <ul class="skill-list">
+              <li>Zoom Rooms Setup & Troubleshooting</li>
+              <li>Microsoft Teams Rooms</li>
+              <li>CommBox Interactive Displays</li>
+              <li>Vivi Classroom Technology</li>
+              <li>FrontRow Engagement Systems</li>
+              <li>Avaya Communications</li>
+              <li>Classroom & Event Support</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Service Management & Operations</h3>
+            <ul class="skill-list">
+              <li>Service Desk Plus (Ticketing)</li>
+              <li>Incident Management</li>
+              <li>Service Requests & Workflows</li>
+              <li>Asset & Inventory Management</li>
+              <li>Warranty Management</li>
+              <li>Vendor Coordination</li>
+              <li>Technical Documentation</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Networking & Infrastructure Fundamentals</h3>
+            <ul class="skill-list">
+              <li>TCP/IP & Network Fundamentals</li>
+              <li>DNS & DHCP Configuration</li>
+              <li>VPN Concepts</li>
+              <li>Wi-Fi Troubleshooting</li>
+              <li>Network Diagnostics</li>
+              <li>Cloudflare DNS & Security</li>
+              <li>Remote Access & Connectivity</li>
+            </ul>
+          </div>
+        </div>
+
+        <br />
+
+        <div class="section-heading" style="margin-top: 40px;">
+          <h2>Professional Skills</h2>
+          <p>
+            Soft skills and professional practices that support technical excellence,
+            user support, and continuous improvement.
+          </p>
+        </div>
+
+        <div class="grid">
+          <div class="card">
+            <h4 style="color: var(--accent); font-weight: 900; margin-bottom: 12px;">Communication & Collaboration</h4>
+            <ul class="skill-list">
+              <li>Technical troubleshooting & problem-solving</li>
+              <li>Root cause analysis</li>
+              <li>Clear user communication</li>
+              <li>Cross-team collaboration</li>
+              <li>Vendor coordination & management</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h4 style="color: var(--accent); font-weight: 900; margin-bottom: 12px;">Documentation & Learning</h4>
+            <ul class="skill-list">
+              <li>Technical documentation</li>
+              <li>Knowledge base development</li>
+              <li>User training & instruction</li>
+              <li>Troubleshooting guides</li>
+              <li>Continuous learning mindset</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h4 style="color: var(--accent); font-weight: 900; margin-bottom: 12px;">Operations & Management</h4>
+            <ul class="skill-list">
+              <li>Time management & prioritization</li>
+              <li>Incident response & escalation</li>
+              <li>Process improvement</li>
+              <li>Service quality focus</li>
+              <li>Proactive troubleshooting</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -669,56 +829,67 @@
     <section id="homelab">
       <div class="container">
         <div class="section-heading">
-          <h2>Home Lab</h2>
+          <h2>Home Lab Infrastructure</h2>
           <p>
-            A practical learning environment where I continue developing skills in Docker,
-            Linux, networking, Home Assistant, self-hosted services, troubleshooting, and documentation.
+            My home lab is a personal learning environment where I safely deploy, configure, troubleshoot, and document modern infrastructure technologies. It allows me to explore Docker, Linux, networking, automation, and self-hosted services outside of my professional environment.
           </p>
         </div>
 
         <div class="grid">
           <div class="card">
-            <h3>Infrastructure</h3>
-            <p>Hands-on practice with Linux environments, Docker containers, self-hosted services, Cloudflare Tunnel, and remote access concepts.</p>
+            <h3>Infrastructure & Containerization</h3>
+            <p>
+              Hands-on practice with Linux environments, Docker containers, Docker Compose, container networking, and self-hosted services. Running multiple containerized applications including media management, VPN services, and web infrastructure.
+            </p>
             <div class="tags">
               <span class="tag">Docker</span>
-              <span class="tag">Linux</span>
+              <span class="tag">Docker Compose</span>
+              <span class="tag">Linux Administration</span>
+              <span class="tag">Container Networking</span>
               <span class="tag">Self-hosted Services</span>
-              <span class="tag">Cloudflare</span>
             </div>
           </div>
 
           <div class="card">
-            <h3>Smart Home</h3>
-            <p>Configured and maintained Home Assistant with MQTT, Zigbee2MQTT, Zigbee devices, dashboards, and smart home automation.</p>
+            <h3>Smart Home & IoT Automation</h3>
+            <p>
+              Configured and maintained Home Assistant as a central hub for home automation. Integrated MQTT messaging, Zigbee2MQTT protocol, Zigbee devices, custom dashboards, and automated workflows for comprehensive smart home control and monitoring.
+            </p>
             <div class="tags">
               <span class="tag">Home Assistant</span>
-              <span class="tag">MQTT</span>
+              <span class="tag">MQTT (Mosquitto)</span>
               <span class="tag">Zigbee2MQTT</span>
               <span class="tag">Zigbee Devices</span>
+              <span class="tag">Home Automation</span>
             </div>
           </div>
 
           <div class="card">
-            <h3>Networking</h3>
-            <p>Learning and practising home networking, DNS, DHCP, connectivity troubleshooting, remote access, and VLAN fundamentals.</p>
+            <h3>Networking & Remote Access</h3>
+            <p>
+              Designing and configuring home network infrastructure including DNS resolution, DHCP services, static IP addressing, remote access solutions, and network troubleshooting. Experimenting with Cloudflare Tunnel for secure service exposure and Cloudflare DNS for enhanced security and performance.
+            </p>
             <div class="tags">
-              <span class="tag">Networking</span>
-              <span class="tag">DNS</span>
-              <span class="tag">DHCP</span>
-              <span class="tag">Remote Access</span>
-              <span class="tag">VLAN Fundamentals</span>
+              <span class="tag">Home Network Design</span>
+              <span class="tag">DNS Configuration</span>
+              <span class="tag">DHCP Services</span>
+              <span class="tag">Cloudflare Tunnel</span>
+              <span class="tag">Cloudflare DNS</span>
+              <span class="tag">Network Troubleshooting</span>
             </div>
           </div>
 
           <div class="card">
-            <h3>Learning Path</h3>
-            <p>Using hands-on projects to build practical confidence in infrastructure, troubleshooting, documentation, and repeatable technical processes.</p>
+            <h3>Practical Learning & Documentation</h3>
+            <p>
+              My home lab allows me to deploy and manage Docker containers, build experience with Linux administration, practise networking and secure remote access, troubleshoot complex infrastructure issues, document configurations and technical solutions, and continuously improve practical IT skills through real-world experimentation.
+            </p>
             <div class="tags">
-              <span class="tag orange">Currently Learning</span>
-              <span class="tag">Technical Notes</span>
-              <span class="tag">Troubleshooting Guides</span>
+              <span class="tag orange">Hands-on Learning</span>
+              <span class="tag">Technical Documentation</span>
               <span class="tag">Configuration Practice</span>
+              <span class="tag">Troubleshooting Experience</span>
+              <span class="tag">Process Development</span>
             </div>
           </div>
         </div>
@@ -730,8 +901,8 @@
         <div class="section-heading">
           <h2>Project Showcase</h2>
           <p>
-            Practical projects and technical areas that demonstrate hands-on learning,
-            troubleshooting, configuration, and real-world IT curiosity.
+            Practical projects and technical initiatives that demonstrate hands-on learning,
+            troubleshooting, configuration skills, and real-world IT problem-solving.
           </p>
         </div>
 
@@ -739,56 +910,61 @@
           <div class="card">
             <h3>Personal Portfolio Website</h3>
             <p>
-              Built and hosted a responsive personal IT portfolio using GitHub Pages,
-              a custom Cloudflare-managed domain, and a single-page HTML/CSS layout.
+              Built and deployed a responsive personal IT portfolio using GitHub Pages,
+              a custom Cloudflare-managed domain (resume.ct8.pro), and single-page HTML/CSS design.
+              Demonstrates proficiency with version control, DNS management, and modern web technologies.
             </p>
             <div class="tags">
               <span class="tag">GitHub Pages</span>
               <span class="tag">Cloudflare DNS</span>
-              <span class="tag">HTML</span>
-              <span class="tag">CSS</span>
+              <span class="tag">HTML & CSS</span>
+              <span class="tag">Responsive Design</span>
+              <span class="tag">Domain Management</span>
             </div>
             <a href="https://resume.ct8.pro" class="project-link" target="_blank">View live site →</a>
           </div>
 
           <div class="card">
-            <h3>Docker-Based Home Lab</h3>
+            <h3>Docker-Based Home Lab Infrastructure</h3>
             <p>
-              Created a Docker-based home lab to run self-hosted services,
-              test configurations, practise troubleshooting, and improve understanding
-              of containerised infrastructure.
+              Created a Docker-based home lab environment running self-hosted services for personal use and testing. Configured Docker Compose for multi-container orchestration, practised troubleshooting containerized applications, and improved understanding of modern infrastructure deployment patterns.
             </p>
             <div class="tags">
               <span class="tag">Docker</span>
+              <span class="tag">Docker Compose</span>
               <span class="tag">Linux</span>
-              <span class="tag">Self-hosted</span>
+              <span class="tag">Self-hosted Services</span>
+              <span class="tag">Infrastructure Testing</span>
             </div>
           </div>
 
           <div class="card">
-            <h3>Home Assistant Smart Home</h3>
+            <h3>Home Assistant Smart Home Ecosystem</h3>
             <p>
-              Configured Home Assistant with Zigbee devices, MQTT, Zigbee2MQTT,
-              dashboards, and automation features for smart home control.
+              Designed and deployed a comprehensive Home Assistant smart home setup with Zigbee device integration,
+              MQTT-based communication protocols, Zigbee2MQTT bridge, custom automation dashboards, and IoT device management.
             </p>
             <div class="tags">
               <span class="tag">Home Assistant</span>
               <span class="tag">MQTT</span>
               <span class="tag">Zigbee2MQTT</span>
-              <span class="tag">IoT</span>
+              <span class="tag">IoT Integration</span>
+              <span class="tag">Home Automation</span>
             </div>
           </div>
 
           <div class="card">
-            <h3>Cloudflare Tunnel and DNS Practice</h3>
+            <h3>Cloudflare Tunnel & DNS Infrastructure</h3>
             <p>
-              Used Cloudflare-managed DNS and tunnel concepts to understand remote access,
-              custom domains, subdomains, and secure exposure of selected services.
+              Implemented Cloudflare-managed DNS with Cloudflare Tunnel for secure remote access and service exposure.
+              Gained practical experience with custom domains, subdomains, DNS routing, and secure service delivery patterns.
             </p>
             <div class="tags">
-              <span class="tag">Cloudflare</span>
-              <span class="tag">DNS</span>
+              <span class="tag">Cloudflare Tunnel</span>
+              <span class="tag">Cloudflare DNS</span>
+              <span class="tag">DNS Routing</span>
               <span class="tag">Remote Access</span>
+              <span class="tag">Security</span>
             </div>
           </div>
         </div>
@@ -801,7 +977,7 @@
           <h2>Certifications & Current Learning</h2>
           <p>
             Active study pathway showing current progress, completed modules,
-            and upcoming cybersecurity study.
+            upcoming cybersecurity study, and continuous learning focus.
           </p>
         </div>
 
@@ -810,8 +986,8 @@
           <p class="subtitle">Google • Coursera • In Progress</p>
 
           <p>
-            Currently completing Google's six-course IT Support program. I have completed the first module,
-            <strong>Technical Support Fundamentals</strong>, and I am continuing through the remaining modules
+            Currently completing Google's six-course IT Support Professional program. I have completed the first module,
+            <strong>Technical Support Fundamentals</strong>, and I am actively progressing through the networking module
             toward the full Google IT Support Professional Certificate.
           </p>
 
@@ -868,19 +1044,20 @@
         <br />
 
         <div class="card">
-          <h3>What I am Currently Learning</h3>
+          <h3>Current Learning Focus</h3>
           <p>
-            My current learning focus is on computer networking, IT support fundamentals,
-            Microsoft endpoint technologies, cybersecurity foundations, cloud concepts,
-            and improving my practical documentation and troubleshooting skills.
+            My learning pathway is focused on building deeper expertise in computer networking fundamentals,
+            IT support operations, Microsoft endpoint management, cybersecurity foundations, cloud infrastructure concepts,
+            and improving practical technical documentation and troubleshooting skills.
           </p>
 
           <div class="tags">
-            <span class="tag orange">Networking</span>
-            <span class="tag orange">IT Support</span>
+            <span class="tag orange">Computer Networking</span>
+            <span class="tag orange">IT Support Fundamentals</span>
+            <span class="tag orange">Microsoft Endpoint Technologies</span>
             <span class="tag orange">Cybersecurity Foundations</span>
             <span class="tag orange">Cloud Concepts</span>
-            <span class="tag orange">Documentation</span>
+            <span class="tag orange">Technical Documentation</span>
           </div>
         </div>
       </div>
@@ -892,7 +1069,7 @@
           <h2>Education</h2>
           <p>
             Academic background combining international relations, information technology,
-            networking, and upcoming cybersecurity study.
+            networking fundamentals, and upcoming cybersecurity studies.
           </p>
         </div>
 
@@ -907,8 +1084,8 @@
             </div>
             <p>
               Beginning formal university study in cybersecurity with the intention of progressing
-              into a Bachelor's degree. Areas of focus include cyber defence, secure systems,
-              risk management, networking, cloud technologies, and information security.
+              into a Bachelor's degree. Areas of focus include cyber defence, secure systems architecture,
+              risk management, networking security, cloud technologies, and information security principles.
             </p>
           </div>
 
@@ -921,8 +1098,8 @@
               <span class="date">Completed</span>
             </div>
             <p>
-              Advanced studies in networking technologies, infrastructure, technical problem solving,
-              and enterprise IT support.
+              Advanced studies in networking technologies, IT infrastructure, technical problem solving,
+              enterprise system design, and comprehensive IT support practices.
             </p>
           </div>
 
@@ -935,8 +1112,8 @@
               <span class="date">Completed</span>
             </div>
             <p>
-              Developed knowledge in enterprise networking, systems administration,
-              infrastructure support, troubleshooting, and IT service delivery.
+              Comprehensive studies in enterprise networking, systems administration,
+              infrastructure support, technical troubleshooting, and IT service delivery practices.
             </p>
           </div>
 
@@ -949,7 +1126,7 @@
               <span class="date">Completed</span>
             </div>
             <p>
-              Studied networking fundamentals, technical support, Windows environments,
+              Foundational studies in networking fundamentals, technical support operations, Windows environments,
               routing and switching concepts, and IT infrastructure basics.
             </p>
           </div>
@@ -963,8 +1140,8 @@
               <span class="date">Completed</span>
             </div>
             <p>
-              Completed a Bachelor's degree focused on international affairs, political science,
-              diplomacy, research, communication, public policy, and analytical problem solving.
+              Bachelor's degree focused on international affairs, political science,
+              diplomacy, research methodology, communication, public policy, and analytical problem solving.
             </p>
           </div>
         </div>
@@ -976,23 +1153,23 @@
         <div class="section-heading">
           <h2>Career Direction</h2>
           <p>
-            A focused pathway toward stronger Microsoft, endpoint, networking, cloud,
-            infrastructure, and cybersecurity capabilities.
+            A focused pathway toward stronger Microsoft, endpoint management, networking,
+            cloud infrastructure, and cybersecurity expertise.
           </p>
         </div>
 
         <div class="card">
           <p>
             I am committed to continuous professional development through practical experience,
-            structured learning, higher education, and hands-on home lab projects. My current focus
-            is strengthening my knowledge in cybersecurity, machine learning, artificial intelligence,
-            networking, cloud computing, and modern IT infrastructure.
+            structured learning programs, higher education, and hands-on home lab projects. My current focus
+            is strengthening knowledge in cybersecurity, cloud technologies, modern IT infrastructure,
+            networking design, and endpoint management practices.
           </p>
           <br />
           <p>
-            My long-term goal is to progress in a field  that combines cybersecurity, AI, machine learning,
-            cloud technologies, and infrastructure, while continuing to expand my technical knowledge
-            through professional experience, study, and practical projects.
+            My long-term goal is to progress into a role that combines cybersecurity, infrastructure management,
+            cloud technologies, and systems administration, while continuing to expand technical depth
+            through professional experience, formal education, and practical projects.
           </p>
         </div>
       </div>
@@ -1001,31 +1178,32 @@
     <section id="contact">
       <div class="container">
         <div class="section-heading">
-          <h2>Contact</h2>
+          <h2>Get In Touch</h2>
           <p>
-            
+            Feel free to reach out via email, connect on LinkedIn, or explore my work on GitHub.
+            I'm always interested in discussing IT infrastructure, home lab projects, and career opportunities.
           </p>
         </div>
 
-        <div class="grid">
-          <div class="card">
-            <h3>Location</h3>
-            <p>Melbourne, Victoria, Australia</p>
+        <div class="contact-grid">
+          <div class="contact-item">
+            <strong>Email</strong>
+            <a href="mailto:cristhian@ct8.pro">cristhian@ct8.pro</a>
           </div>
 
-          <div class="card">
-            <h3>Email</h3>
-            <p><a href="mailto:cristhian.ct8.pro">cristhian.ct8.pro</a></p>
+          <div class="contact-item">
+            <strong>LinkedIn</strong>
+            <a href="https://linkedin.com/in/cristhian-tacuma" target="_blank">Connect with me</a>
           </div>
 
-          <div class="card">
-            <h3>GitHub</h3>
-            <p><a href="https://github.com/UnderGradRanger" target="_blank">github.com/UnderGradRanger</a></p>
+          <div class="contact-item">
+            <strong>GitHub</strong>
+            <a href="https://github.com/UnderGradRanger" target="_blank">@UnderGradRanger</a>
           </div>
 
-          <div class="card">
-            <h3>LinkedIn</h3>
-            <p><a href="#" target="_blank">linkedin.com/in/cristhian-camilo-tacuma-gongora-bb905259</a></p>
+          <div class="contact-item">
+            <strong>Website</strong>
+            <a href="https://resume.ct8.pro" target="_blank">resume.ct8.pro</a>
           </div>
         </div>
       </div>
@@ -1035,7 +1213,7 @@
 
   <footer>
     <div class="container">
-      <p>© 2026 Cristhian Camilo Tacuma Gongora. Personal IT portfolio hosted at resume.ct8.pro.</p>
+      <p>&copy; 2026 Cristhian Tacuma. All rights reserved.</p>
     </div>
   </footer>
 
