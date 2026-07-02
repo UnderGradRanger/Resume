@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Resume | IT Client Tech & AV Coordinator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent: #38bdf8;
+            --accent-hover: #7dd3fc;
+            --border: #334155;
+            --card-bg: rgba(30, 41, 59, 0.7);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem 2rem;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        /* Layout Container */
+        main {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 8rem 2rem 4rem 2rem;
+        }
+
+        section {
+            padding: 3rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 40px;
+            height: 3px;
+            background-color: var(--accent);
+            border-radius: 2px;
+        }
+
+        /* Hero / Summary Section */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            padding-top: 1rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            line-height: 1.1;
+        }
+
+        .hero h1 span {
+            color: var(--accent);
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 800px;
+        }
+
+        /* Experience & Education Grid styling */
+        .timeline-item {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .timeline-item:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent);
+        }
+
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .job-title, .edu-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .company, .institution {
+            font-size: 1.05rem;
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        .date-badge {
+            background-color: var(--bg-primary);
+            border: 1px solid var(--border);
+            padding: 0.35rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        .timeline-body ul {
+            list-style-type: none;
+        }
+
+        .timeline-body li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        .timeline-body li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-category {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.75rem;
+        }
+
+        .skill-category h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1.25rem;
+            color: var(--text-primary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            background-color: rgba(56, 189, 248, 0.1);
+            color: var(--accent);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .tag.lab {
+            background-color: rgba(148, 163, 184, 0.1);
+            color: var(--text-secondary);
+            border: 1px solid rgba(148, 163, 184, 0.2);
+        }
+
+        /* Goals / About Section Card */
+        .goals-card {
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.8) 100%);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2.5rem;
+        }
+
+        .goals-card p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .goals-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border);
+            background-color: var(--bg-primary);
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+            }
+            
+            nav ul {
+                gap: 1.25rem;
+            }
+
+            main {
+                padding-top: 10rem;
+                padding-left: 1.25rem;
+                padding-right: 1.25rem;
+            }
+
+            .hero h1 {
+                font-size: 2.25rem;
+            }
+
+            .timeline-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.25rem;
+            }
+
+            .date-badge {
+                margin-top: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">IT<span>.Portfolio</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#skills">Skills & Projects</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#goals">Career Goals</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <h1>IT Client Tech & <br><span>AV Coordinator</span></h1>
+            <div class="subtitle">Based in Australia</div>
+            <p>
+                Highly capable IT professional specializing in modern endpoint management, reliable service desk operations, and audiovisual deployment. Proven expertise in optimizing workplace infrastructure alongside continuous hands-on exploration of emerging networking and secure technologies.
+            </p>
+        </section>
+
+        <section id="experience">
+            <h2>Professional Experience</h2>
+            
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <div>
+                        <div class="job-title">IT Client Tech / AV Technician</div>
+                        <div class="company">Emmanuel College</div>
+                    </div>
+                    <span class="date-badge">Current Position</span>
+                </div>
+                <div class="timeline-body">
+                    <ul>
+                        <li>Lead day-to-day service desk operations, providing advanced tier desktop, mobile device, and comprehensive IT support.</li>
+                        <li>Manage enterprise endpoint health, provisioning strategies, compliance, and full device lifecycles using Microsoft Autopilot, Intune, and Azure AD (Entra ID).</li>
+                        <li>Administer core infrastructure environments utilizing Windows Server systems and Microsoft 365 cloud ecosystems.</li>
+                        <li>Oversee diverse, mission-critical AV infrastructure and event technologies including Vivi, CommBox, FrontRow, Avaya, Zoom Rooms, and Microsoft Teams Rooms.</li>
+                        <li>Deliver robust technical assistance and system operations across various multi-campus dynamic academic, operations, and large-scale event environments.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Technical Core & Practical Frameworks</h2>
+            <div class="skills-grid">
+                
+                <div class="skill-category">
+                    <h3>Endpoint & Enterprise Systems</h3>
+                    <div class="tags">
+                        <span class="tag">Microsoft 365</span>
+                        <span class="tag">Azure AD / Entra ID</span>
+                        <span class="tag">Microsoft Intune</span>
+                        <span class="tag">Windows Autopilot</span>
+                        <span class="tag">Windows Server</span>
+                        <span class="tag">Device Lifecycle Mgmt</span>
+                        <span class="tag">Endpoint Compliance</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>AV & Event Technology</h3>
+                    <div class="tags">
+                        <span class="tag">Microsoft Teams Rooms</span>
+                        <span class="tag">Zoom Rooms</span>
+                        <span class="tag">Vivi Systems</span>
+                        <span class="tag">CommBox</span>
+                        <span class="tag">FrontRow AV</span>
+                        <span class="tag">Avaya Systems</span>
+                        <span class="tag">Event Tech Operations</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Homelab & Development (R&D)</h3>
+                    <div class="tags">
+                        <span class="tag lab">Enterprise Networking</span>
+                        <span class="tag lab">Docker Containers</span>
+                        <span class="tag lab">Self-Hosted Services</span>
+                        <span class="tag lab">Advanced Routing & Switching</span>
+                        <span class="tag lab">Technical Documentation</span>
+                        <span class="tag lab">Syslog & Troubleshooting</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Education & Professional Frameworks</h2>
+
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <div>
+                        <div class="job-title">Undergraduate Certificate in Cybersecurity</div>
+                        <div class="institution">La Trobe University</div>
+                    </div>
+                    <span class="date-badge">Commencing July 2026</span>
+                </div>
+                <div class="timeline-body">
+                    <p style="color: var(--text-secondary);">Beginning formal university studies in cybersecurity pathways targeting explicit foundations in cyber defense, secure ecosystem design, risk management, enterprise networking, cloud tech, and specialized information security structures.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <div>
+                        <div class="job-title">Advanced Diploma of Information Technology / Networking</div>
+                        <div class="institution">VET Sector</div>
+                    </div>
+                    <span class="date-badge">Completed</span>
+                </div>
+                <div class="timeline-body">
+                    <p style="color: var(--text-secondary);">Advanced academic training centered on complex networking architecture, modern enterprise infrastructure deployment, macro systems implementation, and systemic technical problem-solving workflows.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <div>
+                        <div class="job-title">Diploma of Information Technology / Networking</div>
+                        <div class="institution">VET Sector</div>
+                    </div>
+                    <span class="date-badge">Completed</span>
+                </div>
+                <div class="timeline-body">
+                    <p style="color: var(--text-secondary);">Expanded underlying operational knowledge in enterprise grade networking stacks, active directory/systems administration paradigms, structural troubleshooting, and advanced technical IT support.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <div>
+                        <div class="job-title">Certificate IV in Information Technology (Networking)</div>
+                        <div class="institution">VET Sector</div>
+                    </div>
+                    <span class="date-badge">Completed</span>
+                </div>
+                <div class="timeline-body">
+                    <p style="color: var(--text-secondary);">Focused directly on foundational routing protocols, switching techniques, core TCP/IP logic, network perimeter security, basic Windows systems administration, and functional operational tech support environments.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <div>
+                        <div class="job-title">Bachelor of International Relations</div>
+                        <div class="institution">Universidad de San Buenaventura • Bogotá, Colombia</div>
+                    </div>
+                    <span class="date-badge">Completed</span>
+                </div>
+                <div class="timeline-body">
+                    <p style="color: var(--text-secondary);">Completed global-focused degree emphasizing international affairs, political science methodologies, diplomacy frameworks, quantitative/qualitative research design, public policy analytics, and high-level analytical problem solving.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="goals">
+            <h2>Career Vision & Trajectory</h2>
+            <div class="goals-card">
+                <p>
+                    I am actively dedicated to long-term professional development, consistently driving my technical expertise deeper into cloud ecosystems, modern secure infrastructure, unified modern workplace endpoints, and advanced enterprise networking systems. 
+                </p>
+                <p>
+                    With my upcoming academic milestone at La Trobe University, my systematic focus centers heavily on cybersecurity principles as I transition into a full Bachelor's tier degree track. 
+                </p>
+                <p>
+                    <strong>Long-Term Objectives:</strong> I aim to leverage my diverse field experience and foundational insight to step confidently into roles such as a <strong>Senior Systems Administrator</strong>, <strong>Cloud Engineer</strong>, <strong>Solutions Architect</strong>, or <strong>IT Infrastructure Specialist</strong>.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Portfolio. Built cleanly as a single responsive environment.</p>
+    </footer>
+
+</body>
+</html>
