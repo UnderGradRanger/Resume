@@ -492,6 +492,45 @@
       word-break: break-all;
     }
 
+    .certificate-item {
+      background: rgba(34, 197, 94, 0.08);
+      border-left: 3px solid var(--green);
+      padding: 16px;
+      border-radius: 8px;
+      margin-top: 16px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .certificate-icon {
+      color: var(--green);
+      font-size: 1.8rem;
+      flex-shrink: 0;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .certificate-content h4 {
+      color: var(--text);
+      font-size: 1rem;
+      margin-bottom: 6px;
+      font-weight: 900;
+    }
+
+    .certificate-content p {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin: 4px 0;
+    }
+
+    .certificate-link {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 0.85rem;
+      font-weight: 800;
+    }
+
     @media (max-width: 880px) {
       .nav {
         flex-direction: column;
@@ -510,6 +549,10 @@
 
       .stats {
         grid-template-columns: 1fr;
+      }
+
+      .certificate-item {
+        flex-direction: column;
       }
     }
 
@@ -563,7 +606,7 @@
 
   <header>
     <div class="container nav">
-      <a href="#top" class="logo">Cristhian Camilo Tacuma Gongora<span>.</span></a>
+      <a href="#top" class="logo">Cristhian Tacuma<span>.</span></a>
 
       <nav>
         <ul>
@@ -583,7 +626,7 @@
 
     <section class="container hero">
       <div>
-        <div class="badge">IT Client / AV Technician</div>
+        <div class="badge">IT Client Tech / AV Technician</div>
 
         <p>
           I am an IT Client Tech / AV Technician based in Melbourne, Australia.
@@ -609,7 +652,7 @@
 
         <div class="profile-line">
           <span>Current Role</span>
-          <span>IT Client / AV Technician</span>
+          <span>IT Client Tech / AV Technician</span>
         </div>
 
         <div class="stats">
@@ -645,14 +688,14 @@
           <div class="timeline-item">
             <div class="timeline-top">
               <div>
-                <h3>IT Client / AV Technician</h3>
+                <h3>IT Client Tech / AV Technician</h3>
                 <p class="subtitle">Emmanuel College – Melbourne, Australia</p>
               </div>
               <span class="date">Current Position</span>
             </div>
 
             <p style="margin-bottom: 16px;">
-              As an IT / AV Technician, I provide frontline and advanced technical support across two campuses serving approximately 2,800 staff and students. My role combines enterprise desktop support, endpoint management, Microsoft technologies, audiovisual systems, and service desk operations to ensure reliable day-to-day IT services.
+              As an IT Client AV Technician, I provide frontline and advanced technical support across two campuses serving approximately 2,800 staff and students. My role combines enterprise desktop [...]
             </p>
 
             <h4 style="color: var(--accent); font-weight: 900; margin-top: 16px; margin-bottom: 12px;">Key Responsibilities & Achievements</h4>
@@ -669,7 +712,7 @@
             </ul>
 
             <div class="achievement">
-              <strong>Technical Achievement:</strong> Investigated and resolved a critical communication issue affecting school administration when Mail Merge Toolkit became incompatible with the latest Microsoft 365 environment. After researching alternative solutions and validating multiple approaches, I identified Microsoft Power Automate as a suitable replacement, allowing the school to continue sending bulk excursion communications without disrupting daily operations.
+              <strong>Technical Achievement:</strong> Investigated and resolved a critical communication issue affecting school administration when Mail Merge Toolkit became incompatible with the late[...]
             </div>
           </div>
 
@@ -683,7 +726,7 @@
             </div>
 
             <p>
-              Actively expanding expertise through professional experience, structured learning pathways, hands-on home lab projects, and technical documentation. Current focus areas include Microsoft technologies, endpoint management, networking fundamentals, cloud infrastructure, and cybersecurity foundations.
+              Actively expanding expertise through professional experience, structured learning pathways, hands-on home lab projects, and technical documentation. Current focus areas include Microsoft[...]
             </p>
           </div>
         </div>
@@ -831,7 +874,7 @@
         <div class="section-heading">
           <h2>Home Lab Infrastructure</h2>
           <p>
-            My home lab is a personal learning environment where I safely deploy, configure, troubleshoot, and document modern infrastructure technologies. It allows me to explore Docker, Linux, networking, automation, and self-hosted services outside of my professional environment.
+            My home lab is a personal learning environment where I safely deploy, configure, troubleshoot, and document modern infrastructure technologies. It allows me to explore Docker, Linux, netwo[...]
           </p>
         </div>
 
@@ -839,7 +882,7 @@
           <div class="card">
             <h3>Infrastructure & Containerization</h3>
             <p>
-              Hands-on practice with Linux environments, Docker containers, Docker Compose, container networking, and self-hosted services. Running multiple containerized applications including media management, VPN services, and web infrastructure.
+              Hands-on practice with Linux environments, Docker containers, Docker Compose, container networking, and self-hosted services. Running multiple containerized applications including media [...]
             </p>
             <div class="tags">
               <span class="tag">Docker</span>
@@ -853,7 +896,7 @@
           <div class="card">
             <h3>Smart Home & IoT Automation</h3>
             <p>
-              Configured and maintained Home Assistant as a central hub for home automation. Integrated MQTT messaging, Zigbee2MQTT protocol, Zigbee devices, custom dashboards, and automated workflows for comprehensive smart home control and monitoring.
+              Configured and maintained Home Assistant as a central hub for home automation. Integrated MQTT messaging, Zigbee2MQTT protocol, Zigbee devices, custom dashboards, and automated workflows[...]
             </p>
             <div class="tags">
               <span class="tag">Home Assistant</span>
@@ -867,7 +910,7 @@
           <div class="card">
             <h3>Networking & Remote Access</h3>
             <p>
-              Designing and configuring home network infrastructure including DNS resolution, DHCP services, static IP addressing, remote access solutions, and network troubleshooting. Experimenting with Cloudflare Tunnel for secure service exposure and Cloudflare DNS for enhanced security and performance.
+              Designing and configuring home network infrastructure including DNS resolution, DHCP services, static IP addressing, remote access solutions, and network troubleshooting. Experimenting w[...]
             </p>
             <div class="tags">
               <span class="tag">Home Network Design</span>
@@ -882,7 +925,7 @@
           <div class="card">
             <h3>Practical Learning & Documentation</h3>
             <p>
-              My home lab allows me to deploy and manage Docker containers, build experience with Linux administration, practise networking and secure remote access, troubleshoot complex infrastructure issues, document configurations and technical solutions, and continuously improve practical IT skills through real-world experimentation.
+              My home lab allows me to deploy and manage Docker containers, build experience with Linux administration, practise networking and secure remote access, troubleshoot complex infrastructur[...]
             </p>
             <div class="tags">
               <span class="tag orange">Hands-on Learning</span>
@@ -927,7 +970,7 @@
           <div class="card">
             <h3>Docker-Based Home Lab Infrastructure</h3>
             <p>
-              Created a Docker-based home lab environment running self-hosted services for personal use and testing. Configured Docker Compose for multi-container orchestration, practised troubleshooting containerized applications, and improved understanding of modern infrastructure deployment patterns.
+              Created a Docker-based home lab environment running self-hosted services for personal use and testing. Configured Docker Compose for multi-container orchestration, practised troubleshoot[...]
             </p>
             <div class="tags">
               <span class="tag">Docker</span>
@@ -1001,176 +1044,15 @@
             </div>
           </div>
 
-          <div class="module-list">
-            <div class="module">
-              <span class="status done">✓</span>
-              <span>Technical Support Fundamentals — Completed</span>
-            </div>
-
-            <div class="module">
-              <span class="status doing">•</span>
-              <span>The Bits and Bytes of Computer Networking — In Progress</span>
-            </div>
-
-            <div class="module">
-              <span class="status todo">–</span>
-              <span>Operating Systems and You: Becoming a Power User</span>
-            </div>
-
-            <div class="module">
-              <span class="status todo">–</span>
-              <span>System Administration and IT Infrastructure Services</span>
-            </div>
-
-            <div class="module">
-              <span class="status todo">–</span>
-              <span>IT Security: Defense against the Digital Dark Arts</span>
-            </div>
-
-            <div class="module">
-              <span class="status todo">–</span>
-              <span>Accelerate Your Job Search with AI</span>
+          <div class="certificate-item">
+            <div class="certificate-icon">✓</div>
+            <div class="certificate-content">
+              <h4>Technical Support Fundamentals — Completed</h4>
+              <p><strong>Completed:</strong> Mar 27, 2026</p>
+              <p><strong>Credential:</strong> Google & Coursera verified certificate</p>
+              <a href="https://coursera.org/verify/80IJKIR3RS42" class="certificate-link" target="_blank">View Certificate →</a>
             </div>
           </div>
-
-          <div class="tags">
-            <span class="tag green">1 Module Completed</span>
-            <span class="tag orange">5 Modules Remaining</span>
-            <span class="tag">Google</span>
-            <span class="tag">Coursera</span>
-          </div>
-        </div>
-
-        <br />
-
-        <div class="card">
-          <h3>Current Learning Focus</h3>
-          <p>
-            My learning pathway is focused on building deeper expertise in computer networking fundamentals,
-            IT support operations, Microsoft endpoint management, cybersecurity foundations, cloud infrastructure concepts,
-            and improving practical technical documentation and troubleshooting skills.
-          </p>
-
-          <div class="tags">
-            <span class="tag orange">Computer Networking</span>
-            <span class="tag orange">IT Support Fundamentals</span>
-            <span class="tag orange">Microsoft Endpoint Technologies</span>
-            <span class="tag orange">Cybersecurity Foundations</span>
-            <span class="tag orange">Cloud Concepts</span>
-            <span class="tag orange">Technical Documentation</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="education">
-      <div class="container">
-        <div class="section-heading">
-          <h2>Education</h2>
-          <p>
-            Academic background combining international relations, information technology,
-            networking fundamentals, and upcoming cybersecurity studies.
-          </p>
-        </div>
-
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-top">
-              <div>
-                <h3>Undergraduate Certificate in Cybersecurity</h3>
-                <p class="subtitle">Commencing July 2026</p>
-              </div>
-              <span class="date">Upcoming</span>
-            </div>
-            <p>
-              Beginning formal university study in cybersecurity with the intention of progressing
-              into a Bachelor's degree. Areas of focus include cyber defence, secure systems architecture,
-              risk management, networking security, cloud technologies, and information security principles.
-            </p>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-top">
-              <div>
-                <h3>Advanced Diploma of Information Technology / Networking</h3>
-                <p class="subtitle">Australia</p>
-              </div>
-              <span class="date">Completed</span>
-            </div>
-            <p>
-              Advanced studies in networking technologies, IT infrastructure, technical problem solving,
-              enterprise system design, and comprehensive IT support practices.
-            </p>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-top">
-              <div>
-                <h3>Diploma of Information Technology / Networking</h3>
-                <p class="subtitle">Australia</p>
-              </div>
-              <span class="date">Completed</span>
-            </div>
-            <p>
-              Comprehensive studies in enterprise networking, systems administration,
-              infrastructure support, technical troubleshooting, and IT service delivery practices.
-            </p>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-top">
-              <div>
-                <h3>Certificate IV in Information Technology / Networking</h3>
-                <p class="subtitle">Australia</p>
-              </div>
-              <span class="date">Completed</span>
-            </div>
-            <p>
-              Foundational studies in networking fundamentals, technical support operations, Windows environments,
-              routing and switching concepts, and IT infrastructure basics.
-            </p>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-top">
-              <div>
-                <h3>Bachelor of International Relations</h3>
-                <p class="subtitle">Universidad de San Buenaventura • Bogotá, Colombia</p>
-              </div>
-              <span class="date">Completed</span>
-            </div>
-            <p>
-              Bachelor's degree focused on international affairs, political science,
-              diplomacy, research methodology, communication, public policy, and analytical problem solving.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="goals">
-      <div class="container">
-        <div class="section-heading">
-          <h2>Career Direction</h2>
-          <p>
-            A focused pathway toward stronger Microsoft, endpoint management, networking,
-            cloud infrastructure, and cybersecurity expertise.
-          </p>
-        </div>
-
-        <div class="card">
-          <p>
-            I am committed to continuous professional development through practical experience,
-            structured learning programs, higher education, and hands-on home lab projects. My current focus
-            is strengthening knowledge in cybersecurity, cloud technologies, modern IT infrastructure,
-            networking design, and endpoint management practices.
-          </p>
-          <br />
-          <p>
-            My long-term goal is to progress into a role that combines cybersecurity, infrastructure management,
-            cloud technologies, and systems administration, while continuing to expand technical depth
-            through professional experience, formal education, and practical projects.
-          </p>
         </div>
       </div>
     </section>
@@ -1180,30 +1062,24 @@
         <div class="section-heading">
           <h2>Get In Touch</h2>
           <p>
-            Feel free to reach out via email, connect on LinkedIn, or explore my work on GitHub.
-            I'm always interested in discussing IT infrastructure, home lab projects, and career opportunities.
+            Feel free to reach out for collaboration, opportunities, or to discuss IT infrastructure and support.
           </p>
         </div>
 
         <div class="contact-grid">
           <div class="contact-item">
             <strong>Email</strong>
-            <a href="mailto:cristhian@ct8.pro">cristhian@ct8.pro</a>
-          </div>
-
-          <div class="contact-item">
-            <strong>LinkedIn</strong>
-            <a href="https://linkedin.com/in/cristhian-tacuma" target="_blank">Connect with me</a>
+            <a href="mailto:hello@resume.ct8.pro">hello@resume.ct8.pro</a>
           </div>
 
           <div class="contact-item">
             <strong>GitHub</strong>
-            <a href="https://github.com/UnderGradRanger" target="_blank">@UnderGradRanger</a>
+            <a href="https://github.com/UnderGradRanger" target="_blank">github.com/UnderGradRanger</a>
           </div>
 
           <div class="contact-item">
-            <strong>Website</strong>
-            <a href="https://resume.ct8.pro" target="_blank">resume.ct8.pro</a>
+            <strong>Location</strong>
+            <a href="#">Melbourne, Australia</a>
           </div>
         </div>
       </div>
@@ -1213,9 +1089,11 @@
 
   <footer>
     <div class="container">
-      <p>&copy; 2026 Cristhian Tacuma. All rights reserved.</p>
+      <p>&copy; 2026 Cristhian Camilo Tacuma Gongora. All rights reserved.</p>
+      <p>IT Client Tech / AV Technician | Melbourne, Australia</p>
     </div>
   </footer>
 
 </body>
+
 </html>
