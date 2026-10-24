@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+  <meta name="description" content="Cristhian Camilo Tacuma Gongora | IT/AV Technician and Cybersecurity student based in Melbourne, Australia." />
   <title>Cristhian Camilo Tacuma Gongora | IT/AV Technician</title>
 
   <style>
@@ -29,6 +29,7 @@
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 90px;
     }
 
     body {
@@ -44,6 +45,12 @@
     a {
       color: var(--accent);
       text-decoration: none;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 3px;
     }
 
     .container {
@@ -151,6 +158,7 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      transition: transform 0.2s ease, border-color 0.2s ease;
     }
 
     .btn.secondary {
@@ -323,6 +331,7 @@
     .timeline-top {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       gap: 18px;
       flex-wrap: wrap;
       margin-bottom: 12px;
@@ -337,82 +346,6 @@
       height: fit-content;
     }
 
-    .progress-wrap {
-      margin-top: 20px;
-    }
-
-    .progress-label {
-      display: flex;
-      justify-content: space-between;
-      gap: 16px;
-      color: var(--muted);
-      font-size: 0.93rem;
-      margin-bottom: 8px;
-    }
-
-    .progress {
-      height: 13px;
-      border-radius: 999px;
-      background: rgba(148, 163, 184, 0.18);
-      border: 1px solid var(--border);
-      overflow: hidden;
-    }
-
-    .progress-fill {
-      width: 17%;
-      height: 100%;
-      background: linear-gradient(90deg, var(--accent), var(--green));
-    }
-
-    .module-list {
-      display: grid;
-      gap: 10px;
-      margin-top: 18px;
-    }
-
-    .module {
-      display: flex;
-      align-items: center;
-      gap: 11px;
-      padding: 12px;
-      border-radius: 12px;
-      background: rgba(2, 6, 23, 0.36);
-      border: 1px solid var(--border);
-      color: var(--muted);
-    }
-
-    .status {
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      flex: 0 0 auto;
-      font-weight: 900;
-    }
-
-    .done {
-      color: var(--green);
-      background: rgba(34, 197, 94, 0.14);
-    }
-
-    .doing {
-      color: var(--orange);
-      background: rgba(245, 158, 11, 0.14);
-    }
-
-    .todo {
-      color: var(--muted);
-      background: rgba(148, 163, 184, 0.12);
-    }
-
-    .project-link {
-      display: inline-block;
-      margin-top: 15px;
-      font-weight: 800;
-    }
-
     .achievement {
       background: rgba(34, 197, 94, 0.08);
       border-left: 3px solid var(--green);
@@ -421,26 +354,6 @@
       margin-top: 12px;
       color: var(--muted);
       font-size: 0.95rem;
-    }
-
-    .two-column {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 18px;
-    }
-
-    .skill-category {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 20px;
-    }
-
-    .skill-category h4 {
-      color: var(--accent);
-      font-size: 1rem;
-      margin-bottom: 12px;
-      font-weight: 900;
     }
 
     .skill-list {
@@ -457,6 +370,12 @@
 
     .skill-list li:last-child {
       border-bottom: none;
+    }
+
+    .project-link {
+      display: inline-block;
+      margin-top: 15px;
+      font-weight: 800;
     }
 
     footer {
@@ -573,11 +492,6 @@
       .profile-line span:last-child {
         text-align: left;
       }
-
-      .progress-label {
-        flex-direction: column;
-        gap: 4px;
-      }
     }
 
     @media print {
@@ -598,17 +512,31 @@
         box-shadow: none;
         border-color: #ddd;
       }
+
+      @page {
+        margin: 0.6in;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+      }
     }
   </style>
 </head>
 
 <body>
-
   <header>
     <div class="container nav">
       <a href="#top" class="logo">Cristhian Tacuma<span>.</span></a>
 
-      <nav>
+      <nav aria-label="Main navigation">
         <ul>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#skills">Skills</a></li>
@@ -623,7 +551,6 @@
   </header>
 
   <main id="top">
-
     <section class="container hero">
       <div>
         <div class="badge">IT Client Tech / AV Technician</div>
@@ -644,7 +571,7 @@
         </div>
       </div>
 
-      <aside class="hero-card">
+      <aside class="hero-card" aria-label="Profile summary">
         <div class="profile-line">
           <span>Location</span>
           <span>Melbourne, Australia</span>
@@ -662,13 +589,13 @@
           </div>
 
           <div class="stat">
-            <strong>1/6</strong>
-            <span>Google IT Modules</span>
+            <strong>1/2</strong>
+            <span>Cybersecurity Subjects Completed</span>
           </div>
 
           <div class="stat">
-            <strong>2026</strong>
-            <span>Cybersecurity Study</span>
+            <strong>AI</strong>
+            <span>Future Major</span>
           </div>
         </div>
       </aside>
@@ -695,7 +622,7 @@
             </div>
 
             <p style="margin-bottom: 16px;">
-              As an IT Client AV Technician, I provide frontline and advanced technical support across two campuses serving approximately 2,800 staff and students. My role combines enterprise desktop [...]
+              As an IT Client AV Technician, I provide frontline and advanced technical support across two campuses serving approximately 2,800 staff and students. My role combines enterprise desktop support, endpoint management, Microsoft 365 administration, and audiovisual systems support in a fast-paced education environment.
             </p>
 
             <h4 style="color: var(--accent); font-weight: 900; margin-top: 16px; margin-bottom: 12px;">Key Responsibilities & Achievements</h4>
@@ -712,7 +639,7 @@
             </ul>
 
             <div class="achievement">
-              <strong>Technical Achievement:</strong> Investigated and resolved a critical communication issue affecting school administration when Mail Merge Toolkit became incompatible with the late[...]
+              <strong>Technical Achievement:</strong> Investigated and resolved a critical communication issue affecting school administration when Mail Merge Toolkit became incompatible with the latest Office environment, restoring business-critical operations and improving staff efficiency.
             </div>
           </div>
 
@@ -726,7 +653,7 @@
             </div>
 
             <p>
-              Actively expanding expertise through professional experience, structured learning pathways, hands-on home lab projects, and technical documentation. Current focus areas include Microsoft[...]
+              Actively expanding expertise through professional experience, structured learning pathways, hands-on home lab projects, and technical documentation. Current focus areas include Microsoft modern workplace practices, endpoint security, cloud administration, networking fundamentals, and cybersecurity operations.
             </p>
           </div>
         </div>
@@ -822,8 +749,6 @@
           </div>
         </div>
 
-        <br />
-
         <div class="section-heading" style="margin-top: 40px;">
           <h2>Professional Skills</h2>
           <p>
@@ -874,7 +799,7 @@
         <div class="section-heading">
           <h2>Home Lab Infrastructure</h2>
           <p>
-            My home lab is a personal learning environment where I safely deploy, configure, troubleshoot, and document modern infrastructure technologies. It allows me to explore Docker, Linux, netwo[...]
+            My home lab is a personal learning environment where I safely deploy, configure, troubleshoot, and document modern infrastructure technologies. It allows me to explore Docker, Linux, networking, automation, remote access, and system security in a practical, hands-on way.
           </p>
         </div>
 
@@ -882,7 +807,7 @@
           <div class="card">
             <h3>Infrastructure & Containerization</h3>
             <p>
-              Hands-on practice with Linux environments, Docker containers, Docker Compose, container networking, and self-hosted services. Running multiple containerized applications including media [...]
+              Hands-on practice with Linux environments, Docker containers, Docker Compose, container networking, and self-hosted services. I regularly run and manage multiple containerized applications for testing and learning purposes.
             </p>
             <div class="tags">
               <span class="tag">Docker</span>
@@ -896,7 +821,7 @@
           <div class="card">
             <h3>Smart Home & IoT Automation</h3>
             <p>
-              Configured and maintained Home Assistant as a central hub for home automation. Integrated MQTT messaging, Zigbee2MQTT protocol, Zigbee devices, custom dashboards, and automated workflows[...]
+              Configured and maintained Home Assistant as a central hub for home automation. Integrated MQTT messaging, Zigbee2MQTT, Zigbee devices, custom dashboards, and automation workflows to build a practical smart home environment.
             </p>
             <div class="tags">
               <span class="tag">Home Assistant</span>
@@ -910,7 +835,7 @@
           <div class="card">
             <h3>Networking & Remote Access</h3>
             <p>
-              Designing and configuring home network infrastructure including DNS resolution, DHCP services, static IP addressing, remote access solutions, and network troubleshooting. Experimenting w[...]
+              Designing and configuring home network infrastructure including DNS resolution, DHCP services, static IP addressing, remote access solutions, and network troubleshooting. I also experiment with secure remote connectivity and cloud-based DNS/security tooling.
             </p>
             <div class="tags">
               <span class="tag">Home Network Design</span>
@@ -925,7 +850,7 @@
           <div class="card">
             <h3>Practical Learning & Documentation</h3>
             <p>
-              My home lab allows me to deploy and manage Docker containers, build experience with Linux administration, practise networking and secure remote access, troubleshoot complex infrastructur[...]
+              My home lab allows me to deploy and manage Docker containers, improve Linux administration experience, practise networking and secure remote access, troubleshoot complex infrastructure issues, and document processes for long-term learning.
             </p>
             <div class="tags">
               <span class="tag orange">Hands-on Learning</span>
@@ -964,13 +889,13 @@
               <span class="tag">Responsive Design</span>
               <span class="tag">Domain Management</span>
             </div>
-            <a href="https://resume.ct8.pro" class="project-link" target="_blank">View live site →</a>
+            <a href="https://resume.ct8.pro" class="project-link" target="_blank" rel="noopener noreferrer">View live site →</a>
           </div>
 
           <div class="card">
             <h3>Docker-Based Home Lab Infrastructure</h3>
             <p>
-              Created a Docker-based home lab environment running self-hosted services for personal use and testing. Configured Docker Compose for multi-container orchestration, practised troubleshoot[...]
+              Created a Docker-based home lab environment running self-hosted services for personal use and testing. Configured Docker Compose for multi-container orchestration, practised troubleshooting across services, and developed repeatable deployment workflows.
             </p>
             <div class="tags">
               <span class="tag">Docker</span>
@@ -999,15 +924,14 @@
           <div class="card">
             <h3>Cloudflare Tunnel & DNS Infrastructure</h3>
             <p>
-              Implemented Cloudflare-managed DNS with Cloudflare Tunnel for secure remote access and service exposure.
-              Gained practical experience with custom domains, subdomains, DNS routing, and secure service delivery patterns.
+              Built and improved personal network access using Cloudflare Tunnel and DNS management services. This project strengthened my understanding of secure remote connectivity, domain configuration, and protecting self-hosted services behind modern network best practices.
             </p>
             <div class="tags">
               <span class="tag">Cloudflare Tunnel</span>
-              <span class="tag">Cloudflare DNS</span>
-              <span class="tag">DNS Routing</span>
+              <span class="tag">DNS Management</span>
               <span class="tag">Remote Access</span>
               <span class="tag">Security</span>
+              <span class="tag">Network Design</span>
             </div>
           </div>
         </div>
@@ -1017,41 +941,54 @@
     <section id="learning">
       <div class="container">
         <div class="section-heading">
-          <h2>Certifications & Current Learning</h2>
+          <h2>Learning & Development</h2>
           <p>
-            Active study pathway showing current progress, completed modules,
-            upcoming cybersecurity study, and continuous learning focus.
+            A continuing commitment to practical learning, structured study, and professional growth across cybersecurity, endpoint management, and modern workplace technologies.
           </p>
         </div>
 
-        <div class="card">
-          <h3>Google IT Support Professional Certificate</h3>
-          <p class="subtitle">Google • Coursera • In Progress</p>
-
-          <p>
-            Currently completing Google's six-course IT Support Professional program. I have completed the first module,
-            <strong>Technical Support Fundamentals</strong>, and I am actively progressing through the networking module
-            toward the full Google IT Support Professional Certificate.
-          </p>
-
-          <div class="progress-wrap">
-            <div class="progress-label">
-              <span><strong>Overall Progress</strong></span>
-              <span>1 of 6 modules completed — 17%</span>
-            </div>
-            <div class="progress">
-              <div class="progress-fill"></div>
-            </div>
+        <div class="certificate-item">
+          <div class="certificate-icon">✓</div>
+          <div class="certificate-content">
+            <h4>Introduction to Cybersecurity</h4>
+            <p>La Trobe University</p>
+            <p>Completed successfully as part of the Undergraduate Certificate in Cybersecurity.</p>
+            <a href="#education" class="certificate-link">Completed subject</a>
           </div>
+        </div>
 
-          <div class="certificate-item">
-            <div class="certificate-icon">✓</div>
-            <div class="certificate-content">
-              <h4>Technical Support Fundamentals — Completed</h4>
-              <p><strong>Completed:</strong> Mar 27, 2026</p>
-              <p><strong>Credential:</strong> Google & Coursera verified certificate</p>
-              <a href="https://coursera.org/verify/80IJKIR3RS42" class="certificate-link" target="_blank">View Certificate →</a>
+        <div class="certificate-item">
+          <div class="certificate-icon">→</div>
+          <div class="certificate-content">
+            <h4>Next Semester: Programming</h4>
+            <p>La Trobe University</p>
+            <p>Continuing my academic pathway toward a deeper understanding of software, systems, and secure application development.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Education</h2>
+          <p>
+            Academic background and continuing education supporting a strong foundation in digital systems, cybersecurity, and modern workplace technology.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-top">
+              <div>
+                <h3>Undergraduate Certificate in Cybersecurity</h3>
+                <p class="subtitle">La Trobe University</p>
+              </div>
+              <span class="date">In Progress</span>
             </div>
+            <p>
+              Completed the subject <strong>Introduction to Cybersecurity</strong> and will continue with <strong>Programming</strong> next semester. After this, I plan to continue toward a <strong>Bachelor of Cybersecurity</strong> with a major in <strong>Artificial Intelligence</strong>.
+            </p>
           </div>
         </div>
       </div>
@@ -1060,40 +997,36 @@
     <section id="contact">
       <div class="container">
         <div class="section-heading">
-          <h2>Get In Touch</h2>
+          <h2>Contact</h2>
           <p>
-            Feel free to reach out for collaboration, opportunities, or to discuss IT infrastructure and support.
+            Open to IT support, endpoint management, AV, cybersecurity, and technical operations opportunities.
           </p>
         </div>
 
         <div class="contact-grid">
           <div class="contact-item">
             <strong>Email</strong>
-            <a href="mailto:hello@resume.ct8.pro">hello@resume.ct8.pro</a>
-          </div>
-
-          <div class="contact-item">
-            <strong>GitHub</strong>
-            <a href="https://github.com/UnderGradRanger" target="_blank">github.com/UnderGradRanger</a>
+            <a href="mailto:cristhian.tacuma@gmail.com">cristhian.tacuma@gmail.com</a>
           </div>
 
           <div class="contact-item">
             <strong>Location</strong>
-            <a href="#">Melbourne, Australia</a>
+            <span>Melbourne, Australia</span>
+          </div>
+
+          <div class="contact-item">
+            <strong>LinkedIn</strong>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">linkedin.com/in/cristhian</a>
           </div>
         </div>
       </div>
     </section>
-
   </main>
 
   <footer>
     <div class="container">
-      <p>&copy; 2026 Cristhian Camilo Tacuma Gongora. All rights reserved.</p>
-      <p>IT Client Tech / AV Technician | Melbourne, Australia</p>
+      © 2026 Cristhian Camilo Tacuma Gongora | IT/AV Technician
     </div>
   </footer>
-
 </body>
-
 </html>
